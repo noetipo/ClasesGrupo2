@@ -28,18 +28,32 @@ def editar_persona():
     dni: str = str(input("Ingrese DNI para Editar: "))
     for persona in personas:
         if persona.dni == dni:
-            persona.nombres=str(input("Ingrese un nuevo nombre: "))
+            persona.nombres = str(input("Ingrese un nuevo nombre: "))
+
+
 def eliminar_persona():
     dni: str = str(input("Ingrese DNI para Eliminar: "))
     for index, persona in enumerate(personas):
-        if persona.dni== dni:
+        if persona.dni == dni:
             personas.pop(index)
+
 
 def main():
     continuar: bool = True
     while continuar:
-        caso: str = str(
-            input("ingrese 1 para crear persona, 2 para listar personas,3 para buscar persona, 4 para editar persona, 5 para eliminar persona, 10 para termimar: "))
+
+        print("*****************************************")
+        print("***********SISTEMA DE VENTAS*************")
+        print("                                         ")
+        print("===================MENÚ==================")
+        print("**************INGRESE OPCIONES***********")
+        print("       1: PARA AGREGAR PERSONA")
+        print("       2: PARA LISTAR PERSONAS")
+        print("       3: PARA BUSCAR PERSONA")
+        print("       4: PARA EDITAR PERSONA")
+        print("       5: PARA ELIMINAR PERSONA")
+        print("       10: PARA SALIR")
+        caso: str = str(input("INGRESE OPCIÓN: "))
         match caso:
             case "1":
                 crear_persona()
