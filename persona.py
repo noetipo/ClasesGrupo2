@@ -7,4 +7,7 @@ class Persona:
         self.apellidos = apellidos
         self.direccion = direccion
         self.telefono = telefono
-        pass
+        print(self.convertir_a_string())
+
+    def convertir_a_string(self):
+        return print("| {} | {} | {} | {} | {} |".format(self.dni, self.nombres, self.apellidos, self.direccion, self.telefono))
